@@ -21,6 +21,8 @@ aws/s3/model/GetObjectRequest.h
 -
 fstream
 -
+unistd.h
+-
 
 /usr/local/include/aws/core/AmazonSerializableWebServiceRequest.h
 aws/core/Core_EXPORTS.h

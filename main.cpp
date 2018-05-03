@@ -5,12 +5,18 @@
 #include <aws/core/platform/Environment.h>
 #include <aws/s3/model/GetObjectRequest.h>
 #include <fstream>
+#include <unistd.h>
 
 /**
  * Get an object from an Amazon S3 bucket.
  */
 int main(int argc, char** argv)
 {
+    int opt = getopt( argc, argv, ":v:d" );
+    while( opt != -1 ) {
+        printf("asdasd");
+        opt = getopt( argc, argv, ":v:d" );
+    }
     if (argc < 3)
     {
         std::cout << std::endl <<
