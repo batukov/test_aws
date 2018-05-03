@@ -1,0 +1,3 @@
+/home/diehigh/workspace/test_aws/cmake-build-release-aws_tools/CMakeFiles/rebuild_cache.dir
+/home/diehigh/workspace/test_aws/cmake-build-release-aws_tools/CMakeFiles/edit_cache.dir
+/home/diehigh/workspace/test_aws/cmake-build-release-aws_tools/CMakeFiles/test_aws.dir
