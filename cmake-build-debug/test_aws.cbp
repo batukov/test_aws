@@ -5,41 +5,41 @@
 		<Option title="test_aws"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\;CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/diehigh/workspace/test_aws/cmake-build-debug"/>
+				<Option working_dir="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/diehigh/workspace/test_aws/cmake-build-debug"/>
+				<Option working_dir="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/diehigh/workspace/test_aws/cmake-build-debug"/>
+				<Option working_dir="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_aws">
-				<Option output="/home/diehigh/workspace/test_aws/cmake-build-debug/test_aws" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws/cmake-build-debug"/>
+				<Option output="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/test_aws" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,17 +53,19 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_aws"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_aws"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_aws/fast">
-				<Option output="/home/diehigh/workspace/test_aws/cmake-build-debug/test_aws" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws/cmake-build-debug"/>
+				<Option output="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/test_aws" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,53 +79,52 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_aws/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_aws/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diehigh/workspace/test_aws/main.cpp">
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/main.cpp">
 			<Option target="test_aws"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/CMakeLists.txt">
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/compiler_settings.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/sdksCommon.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/initialize_project_version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platformDeps.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/platformDeps.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/resolve_platform.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/resolve_platform.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/initialize_project_version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/sdksCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/compiler_settings.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/utilities.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/utilities.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/platform/linux.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platform/unix.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
-		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platform/linux.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
+		<Unit filename="/home/diehigh/Downloads/PROJS/test_aws/../../../../../usr/local/lib/cmake/AWSSDK/platform/unix.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

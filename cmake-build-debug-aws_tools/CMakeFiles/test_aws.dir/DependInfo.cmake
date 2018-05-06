@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/diehigh/workspace/test_aws/main.cpp" "/home/diehigh/workspace/test_aws/cmake-build-debug-aws_tools/CMakeFiles/test_aws.dir/main.cpp.o"
+  "/home/diehigh/Downloads/PROJS/test_aws/main.cpp" "/home/diehigh/Downloads/PROJS/test_aws/cmake-build-debug-aws_tools/CMakeFiles/test_aws.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
