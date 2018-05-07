@@ -47,4 +47,4 @@ execute_process(COMMAND source ~/.bashrc WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 # add the install targets
 install(TARGETS test_aws
         CONFIGURATIONS Debug
-        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR})
+        RUNTIME DESTINATION /usr/local/bin)

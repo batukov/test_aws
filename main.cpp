@@ -164,15 +164,12 @@ int main(int argc, char** argv)
                   "Not enough arguments\n" << std::endl;
         exit(1);
     }
-    std::cout<<"got options"<<std::endl;
     Aws::Vector <Aws::String> val = parse_request(argv[1]);
-    std::cout<<"request parsed"<<std::endl;
     int port_value = get_port_value(argc, argv);
     if(port_value != -1)
     {
         //set_new_port_value(port_value);
     }
-    std::cout<<"got port value"<<std::endl;
     Aws::String bucket_name = "bucket-shmucket-right-here";
     Aws::String object_name;
     Aws::String file_name;
@@ -193,14 +190,13 @@ int main(int argc, char** argv)
             exit(1);
         }
     }
-    std::cout<<"names asigned"<<std::endl;
     Aws::SDKOptions options;
 
     Aws::InitAPI(options);
     {
         download_file(bucket_name, object_name, file_name);
     }
-    std::cout<<"files downloaded"<<std::endl;
+
     Aws::ShutdownAPI(options);
 
     std::string sox_command;
@@ -212,14 +208,11 @@ int main(int argc, char** argv)
         sox_command.append(file_name.c_str());
         sox_command.append(" -r 8000 ");
         sox_command.append(result_name.c_str());
-        std::cout<<"sox ready"<<std::endl;
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
-        std::cout<<"sox run"<<std::endl;
         sox_command.clear();
         sox_command.append("soxi ");
         sox_command.append(file_name.c_str());
-        std::cout << sox_command << std::endl;
         const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
@@ -229,6 +222,7 @@ int main(int argc, char** argv)
         const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
-    return 0;
+    exit(0);
+    //return 0;
 
 }
