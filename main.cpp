@@ -222,5 +222,6 @@ int main(int argc, char** argv)
         const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
+    return 0;
 
 }
