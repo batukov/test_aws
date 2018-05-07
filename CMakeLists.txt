@@ -44,3 +44,7 @@ else()
 endif()
 execute_process(COMMAND echo export PATH=$PATH:/${CMAKE_BINARY_DIR}/test_aws » ~/.bashrc WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 execute_process(COMMAND source ~/.bashrc WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+# add the install targets
+install(TARGETS test_aws
+        CONFIGURATIONS Debug
+        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR})

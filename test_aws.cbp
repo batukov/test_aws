@@ -5,137 +5,165 @@
 		<Option title="test_aws"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\;CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_aws">
-				<Option output="/home/diehigh/workspace/test_aws/test_aws" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
+				<Option output="/home/diehigh/Desktop/test_aws/test_aws" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include"/>
+					<Add option="-DPLATFORM_LINUX"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include-fixed"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 test_aws"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 test_aws"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_aws/fast">
-				<Option output="/home/diehigh/workspace/test_aws/test_aws" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
+				<Option output="/home/diehigh/Desktop/test_aws/test_aws" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/diehigh/Desktop/test_aws"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include"/>
+					<Add option="-DPLATFORM_LINUX"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include-fixed"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 test_aws/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="s3-sample">
-				<Option output="/home/diehigh/workspace/test_aws/s3-sample" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 s3-sample"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="s3-sample/fast">
-				<Option output="/home/diehigh/workspace/test_aws/s3-sample" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diehigh/workspace/test_aws"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../include/c++/7.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-pc-linux-gnu/7.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 s3-sample/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/workspace/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 test_aws/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/diehigh/Desktop/test_aws/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diehigh/workspace/test_aws/main.cpp">
+		<Unit filename="/home/diehigh/Desktop/test_aws/main.cpp">
 			<Option target="test_aws"/>
-			<Option target="s3-sample"/>
 		</Unit>
-		<Unit filename="/home/diehigh/workspace/test_aws/CMakeLists.txt">
+		<Unit filename="/home/diehigh/Desktop/test_aws/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/AWSSDKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/sdksCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platformDeps.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/resolve_platform.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/initialize_project_version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/compiler_settings.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/utilities.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platform/unix.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
+		</Unit>
+		<Unit filename="/home/diehigh/Desktop/test_aws/../../../../usr/local/lib/cmake/AWSSDK/platform/linux.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\AWSSDK\platform\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
