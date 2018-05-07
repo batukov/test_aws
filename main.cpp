@@ -58,10 +58,12 @@ Aws::Vector<Aws::String> parse_request(Aws::String request)
         useful_data.push_back(wav_path);
         useful_data.push_back(wav_name);
     }
+    /*
     for(int i=0; i< useful_data.size(); i++)
     {
         std::cout << useful_data.at(i) << std::endl;
     }
+    */
     return useful_data;
 }
 struct wav_header_t
@@ -124,7 +126,7 @@ int download_file(const Aws::String &bucket_name, const Aws::String &object_name
 
     transfer_handle->WaitUntilFinished();
     bool success = transfer_handle->GetStatus() == Aws::Transfer::TransferStatus::COMPLETED;
-    printf("TRANSFER HANDLE STATUS: %d", transfer_handle->GetStatus());
+    printf("TRANSFER HANDLE STATUS: %d", (int)transfer_handle->GetStatus());
     std::cout << success << std::endl;
 
     return 0;
@@ -132,7 +134,8 @@ int download_file(const Aws::String &bucket_name, const Aws::String &object_name
 
 int get_port_value(int argc, char** argv)
 {
-    char *opts = ":p:";
+    std::string options = ":p:";
+    const char *opts = options.c_str();
     int port_value = -1;
     int opt = getopt( argc, argv, opts );
     while( opt != -1 ) {
@@ -150,6 +153,7 @@ int get_port_value(int argc, char** argv)
 
 int main(int argc, char** argv)
 {
+
     int mode = 0;
     if (argc < 2)
     {
@@ -184,10 +188,12 @@ int main(int argc, char** argv)
     }
 
     Aws::SDKOptions options;
+
     Aws::InitAPI(options);
     {
         download_file(bucket_name, object_name, file_name);
     }
+
     Aws::ShutdownAPI(options);
 
     std::string sox_command;
@@ -203,9 +209,10 @@ int main(int argc, char** argv)
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
 
-        sox_command = nullptr;
+        sox_command.clear();
         sox_command.append("soxi ");
         sox_command.append(file_name.c_str());
+        std::cout << sox_command << std::endl;
         const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
@@ -215,9 +222,5 @@ int main(int argc, char** argv)
         const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
-    //new_temp = "sox out.wav -n stat 2>&1 | sed -n 's#^Length (seconds):[^0-9]*\\([0-9.]*\\)$#\\1#p'";
+
 }
-
-
-//sox input.mp3 -c 1 -r 8000 -1 output.wav
-//sox input.mp3 -r 8000 output.wav
