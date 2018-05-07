@@ -31,6 +31,14 @@ aws/transfer/TransferHandle.h
 -
 aws/transfer/Transfer_EXPORTS.h
 -
+iostream
+-
+fstream
+-
+jsoncpp/json/json.h
+-
+chrono
+-
 
 /usr/local/include/aws/core/AmazonSerializableWebServiceRequest.h
 aws/core/Core_EXPORTS.h

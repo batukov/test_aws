@@ -10,7 +10,11 @@
 #include <aws/transfer/TransferManager.h>
 #include <aws/transfer/TransferHandle.h>
 #include <aws/transfer/Transfer_EXPORTS.h>
-
+#include <iostream>
+#include <fstream>
+#include <jsoncpp/json/json.h>
+#include <chrono>
+typedef std::chrono::high_resolution_clock Clock;
 
 Aws::Vector<Aws::String> parse_request(Aws::String request)
 {
@@ -81,22 +85,40 @@ struct wav_header_t
     unsigned short bitsPerSample;
 };
 
-struct json_output
-{};
+void json_output_mode_zero(wav_header_t wav_header, int time)
+{
+    Json::Value output;
+    int channel_count = INT32_C( wav_header.numChannels);
+    int sample_rate = INT32_C(wav_header.sampleRate);
 
-void show_info_like_json()
-{}
+    float execution_time = (float)time*0.001F;
 
-void get_file_info(const char* fileName)
+    output["channel_count"] = channel_count;
+    output["sample_rate"] = sample_rate;
+    output["execution_time"] = execution_time;
+    std::cout << output << std::endl;
+}
+
+void json_output_mode_one(wav_header_t wav_header, int time)
+{
+    Json::Value output;
+    int file_size = wav_header.chunkSize;
+
+    float execution_time = (float)time*0.001F;
+    output["file_size"] = file_size;
+    output["execution_time"] = execution_time;
+    std::cout << output << std::endl;
+}
+
+wav_header_t get_file_info(const char* fileName)
 {
     FILE *audio_file = fopen(fileName, "rb");
 
     //Read WAV header
     wav_header_t header;
     fread(&header, sizeof(header), 1, audio_file);
-    unsigned short channels     = header.numChannels;
-    unsigned long sample_rate   = header.sampleRate;
     fclose(audio_file);
+    return(header);
 }
 
 int download_file(const Aws::String &bucket_name, const Aws::String &object_name, const Aws::String &file_name) {
@@ -129,8 +151,10 @@ int download_file(const Aws::String &bucket_name, const Aws::String &object_name
 
     transfer_handle->WaitUntilFinished();
     bool success = transfer_handle->GetStatus() == Aws::Transfer::TransferStatus::COMPLETED;
-    printf("TRANSFER HANDLE STATUS: %d", (int)transfer_handle->GetStatus());
-    std::cout << success << std::endl;
+    int transfer_status = (int)transfer_handle->GetStatus();
+
+    //std::cout << transfer_status << std::endl;
+    //std::cout << success << std::endl;
 
     return 0;
 }
@@ -192,15 +216,17 @@ int main(int argc, char** argv)
     }
     Aws::SDKOptions options;
 
+    std::chrono::time_point<std::chrono::high_resolution_clock> time_f_point;
+    std::chrono::time_point<std::chrono::high_resolution_clock> time_s_point;
     Aws::InitAPI(options);
     {
+        time_f_point = Clock::now();
         download_file(bucket_name, object_name, file_name);
     }
 
     Aws::ShutdownAPI(options);
 
     std::string sox_command;
-    std::string dir;
 
     if(mode)
     {
@@ -210,19 +236,19 @@ int main(int argc, char** argv)
         sox_command.append(result_name.c_str());
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
-        sox_command.clear();
-        sox_command.append("soxi ");
-        sox_command.append(file_name.c_str());
-        const char* new_temp_mode_zero= sox_command.c_str();
-        system(new_temp_mode_zero);
+        time_s_point = Clock::now();
+        json_output_mode_one(get_file_info(result_name.c_str()),
+                             std::chrono::duration_cast<std::chrono::milliseconds>(time_s_point - time_f_point).count());
     }
     else{
-        sox_command.append("soxi ");
-        sox_command.append(file_name.c_str());
-        const char* new_temp_mode_zero= sox_command.c_str();
-        system(new_temp_mode_zero);
+        std::cout<<file_name<<std::endl;
+        time_s_point = Clock::now();
+        json_output_mode_zero(get_file_info(file_name.c_str()),
+                              std::chrono::duration_cast<std::chrono::milliseconds>(time_s_point - time_f_point).count());
     }
     exit(0);
     //return 0;
 
 }
+///mp3-to-wav?mp3key=as/Stuck_Mojo_-_Who_s_the_Devil.mp3&wavkey=test2.wav
+///wav-info?wavkey=as/barebear.wav

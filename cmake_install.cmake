@@ -32,39 +32,28 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    if(EXISTS "$ENV{DESTDIR}/usr/local/bin/test_aws" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/test_aws")
-      file(RPATH_CHECK
-           FILE "$ENV{DESTDIR}/usr/local/bin/test_aws"
-           RPATH "")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}/usr/bin/test_aws" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/bin/test_aws")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}/usr/bin/test_aws"
+         RPATH "")
+  endif()
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/usr/bin/test_aws")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/usr/bin" TYPE EXECUTABLE FILES "/home/diehigh/Desktop/test_aws/test_aws")
+  if(EXISTS "$ENV{DESTDIR}/usr/bin/test_aws" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/bin/test_aws")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/bin/test_aws")
     endif()
-    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/usr/local/bin/test_aws")
-    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/diehigh/Desktop/test_aws/test_aws")
-    if(EXISTS "$ENV{DESTDIR}/usr/local/bin/test_aws" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/test_aws")
-      file(RPATH_CHANGE
-           FILE "$ENV{DESTDIR}/usr/local/bin/test_aws"
-           OLD_RPATH "/usr/local/lib:"
-           NEW_RPATH "")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/test_aws")
-      endif()
-    endif()
-  endif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

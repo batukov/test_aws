@@ -1,6 +1,12 @@
+
+
 cmake_minimum_required(VERSION 3.9)
 project(test_aws)
 
+
+
+set(GCC_COVERAGE_COMPILE_FLAGS "-ljsoncpp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
 
 find_package(AWSSDK)
 
@@ -20,7 +26,6 @@ Message(STATUS "${SERVICE} depends on libs: ${DEPS}")
 AWSSDK_DETERMINE_LIBS_TO_LINK(SERVICE OUTPUT)
 
 Message(STATUS "All linked libs: ${OUTPUT}")
-
 if (NOT WIN32)
     find_package(PkgConfig)
     pkg_check_modules(DEPS REQUIRED ${OUTPUT})
@@ -32,6 +37,7 @@ endif()
 
 link_directories("${AWSSDK_LIB_DIR}")
 add_executable(test_aws main.cpp)
+install(TARGETS test_aws DESTINATION /usr/bin/)
 
 if (WIN32)
     add_definitions(-DUSE_IMPORT_EXPORT)
@@ -45,6 +51,3 @@ endif()
 execute_process(COMMAND echo export PATH=$PATH:/${CMAKE_BINARY_DIR}/test_aws » ~/.bashrc WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 execute_process(COMMAND source ~/.bashrc WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 # add the install targets
-install(TARGETS test_aws
-        CONFIGURATIONS Debug
-        RUNTIME DESTINATION /usr/local/bin)
