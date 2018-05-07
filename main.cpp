@@ -119,6 +119,9 @@ int download_file(const Aws::String &bucket_name, const Aws::String &object_name
     Aws::Transfer::TransferManagerConfiguration transfer_manager_config(&executor);
     transfer_manager_config.s3Client = s3_client;
     transfer_manager_config.transferExecutor = &executor;
+    //transfer_manager_config.downloadProgressCallback =
+    //        [](const  Aws::Transfer::TransferManager*, const  Aws::Transfer::TransferHandle& handle)
+    //        { std::cout << handle.IsMultipart() << std::endl; };
     //transfer_manager_config.errorCallback =
     auto transfer_manager = Aws::Transfer::TransferManager::Create(transfer_manager_config);
 
@@ -161,14 +164,15 @@ int main(int argc, char** argv)
                   "Not enough arguments\n" << std::endl;
         exit(1);
     }
-
+    printf("got options\n");
     Aws::Vector <Aws::String> val = parse_request(argv[1]);
+    printf("request parsed\n");
     int port_value = get_port_value(argc, argv);
     if(port_value != -1)
     {
         //set_new_port_value(port_value);
     }
-
+    printf("got port value\n");
     Aws::String bucket_name = "bucket-shmucket-right-here";
     Aws::String object_name;
     Aws::String file_name;
@@ -189,14 +193,14 @@ int main(int argc, char** argv)
             exit(1);
         }
     }
-
+    printf("names asigned\n");
     Aws::SDKOptions options;
 
     Aws::InitAPI(options);
     {
         download_file(bucket_name, object_name, file_name);
     }
-
+    printf("files downloaded\n");
     Aws::ShutdownAPI(options);
 
     std::string sox_command;
@@ -208,10 +212,10 @@ int main(int argc, char** argv)
         sox_command.append(file_name.c_str());
         sox_command.append(" -r 8000 ");
         sox_command.append(result_name.c_str());
-
+        printf("sox ready\n");
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
-
+        printf("sox run\n");
         sox_command.clear();
         sox_command.append("soxi ");
         sox_command.append(file_name.c_str());

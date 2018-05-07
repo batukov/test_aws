@@ -1,7 +1,7 @@
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/install/strip.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/install/local.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/install.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/list_install_components.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/rebuild_cache.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/edit_cache.dir
-/home/diehigh/Desktop/erl_serv/test_aws/CMakeFiles/test_aws.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/install/strip.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/install/local.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/install.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/list_install_components.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/rebuild_cache.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/edit_cache.dir
+/home/diehigh/Desktop/test_aws/CMakeFiles/test_aws.dir
