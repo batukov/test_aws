@@ -171,12 +171,12 @@ int main(int argc, char** argv)
     if(val.front() == "/wav-info")
     {
         object_name     = val.at(1);
-        file_name       = val.back();
+        file_name       = val.at(2);
     }else{
         if(val.front() == "/mp3-to-wav")
         {
             object_name     = val.at(1);
-            file_name       = val.back();
+            file_name       = val.at(2);
             mode = 1;
         }else{exit(1);}
     }
@@ -194,18 +194,20 @@ int main(int argc, char** argv)
     {
         temp.append("sox ");
         temp.append(file_name.c_str());
-        temp.append(" -c 1 -r 8000 -1 output.wav");
+        temp.append(" -r 8000 output.wav");
+        const char* new_temp_mode_one = temp.c_str();
+        system(new_temp_mode_one);
         //temp.append("");
     }
     else{
         temp.append("soxi ");
         temp.append(file_name.c_str());
-        const char* new_temp = temp.c_str();
-        printf("temp: %s", new_temp);
-        system(new_temp);
+        const char* new_temp_mode_zero= temp.c_str();
+        system(new_temp_mode_zero);
     }
     //new_temp = "sox out.wav -n stat 2>&1 | sed -n 's#^Length (seconds):[^0-9]*\\([0-9.]*\\)$#\\1#p'";
 }
 
 
 //sox input.mp3 -c 1 -r 8000 -1 output.wav
+//sox input.mp3 -r 8000 output.wav
