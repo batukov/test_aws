@@ -184,7 +184,10 @@ int main(int argc, char** argv)
             file_name       = val.at(2);
             result_name     = val.back();
             mode = 1;
-        }else{exit(1);}
+        }else{
+            printf("wrong init command\n");
+            exit(1);
+        }
     }
 
     Aws::SDKOptions options;
