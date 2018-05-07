@@ -164,15 +164,15 @@ int main(int argc, char** argv)
                   "Not enough arguments\n" << std::endl;
         exit(1);
     }
-    printf("got options\n");
+    std::cout<<"got options"<<std::endl;
     Aws::Vector <Aws::String> val = parse_request(argv[1]);
-    printf("request parsed\n");
+    std::cout<<"request parsed"<<std::endl;
     int port_value = get_port_value(argc, argv);
     if(port_value != -1)
     {
         //set_new_port_value(port_value);
     }
-    printf("got port value\n");
+    std::cout<<"got port value"<<std::endl;
     Aws::String bucket_name = "bucket-shmucket-right-here";
     Aws::String object_name;
     Aws::String file_name;
@@ -189,18 +189,18 @@ int main(int argc, char** argv)
             result_name     = val.back();
             mode = 1;
         }else{
-            printf("wrong init command\n");
+            std::cout<<"wrong init command"<<std::endl;
             exit(1);
         }
     }
-    printf("names asigned\n");
+    std::cout<<"names asigned"<<std::endl;
     Aws::SDKOptions options;
 
     Aws::InitAPI(options);
     {
         download_file(bucket_name, object_name, file_name);
     }
-    printf("files downloaded\n");
+    std::cout<<"files downloaded"<<std::endl;
     Aws::ShutdownAPI(options);
 
     std::string sox_command;
@@ -212,10 +212,10 @@ int main(int argc, char** argv)
         sox_command.append(file_name.c_str());
         sox_command.append(" -r 8000 ");
         sox_command.append(result_name.c_str());
-        printf("sox ready\n");
+        std::cout<<"sox ready"<<std::endl;
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
-        printf("sox run\n");
+        std::cout<<"sox run"<<std::endl;
         sox_command.clear();
         sox_command.append("soxi ");
         sox_command.append(file_name.c_str());
