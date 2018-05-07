@@ -168,6 +168,7 @@ int main(int argc, char** argv)
     Aws::String bucket_name = "bucket-shmucket-right-here";
     Aws::String object_name;
     Aws::String file_name;
+    Aws::String result_name;
     if(val.front() == "/wav-info")
     {
         object_name     = val.at(1);
@@ -177,6 +178,7 @@ int main(int argc, char** argv)
         {
             object_name     = val.at(1);
             file_name       = val.at(2);
+            result_name     = val.back();
             mode = 1;
         }else{exit(1);}
     }
@@ -188,21 +190,29 @@ int main(int argc, char** argv)
     }
     Aws::ShutdownAPI(options);
 
-    std::string temp;
+    std::string sox_command;
+    std::string dir;
 
     if(mode)
     {
-        temp.append("sox ");
-        temp.append(file_name.c_str());
-        temp.append(" -r 8000 output.wav");
-        const char* new_temp_mode_one = temp.c_str();
+        sox_command.append("sox ");
+        sox_command.append(file_name.c_str());
+        sox_command.append(" -r 8000 ");
+        sox_command.append(result_name.c_str());
+
+        const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
-        //temp.append("");
+
+        sox_command = nullptr;
+        sox_command.append("soxi ");
+        sox_command.append(file_name.c_str());
+        const char* new_temp_mode_zero= sox_command.c_str();
+        system(new_temp_mode_zero);
     }
     else{
-        temp.append("soxi ");
-        temp.append(file_name.c_str());
-        const char* new_temp_mode_zero= temp.c_str();
+        sox_command.append("soxi ");
+        sox_command.append(file_name.c_str());
+        const char* new_temp_mode_zero= sox_command.c_str();
         system(new_temp_mode_zero);
     }
     //new_temp = "sox out.wav -n stat 2>&1 | sed -n 's#^Length (seconds):[^0-9]*\\([0-9.]*\\)$#\\1#p'";

@@ -1,1 +1,1 @@
-/usr/bin/g++-5  -g   CMakeFiles/test_aws.dir/main.cpp.o  -o test_aws  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -laws-cpp-sdk-sqs -laws-cpp-sdk-transfer -laws-cpp-sdk-dynamodb -laws-cpp-sdk-s3-encryption -laws-cpp-sdk-kms -laws-cpp-sdk-apigateway -laws-cpp-sdk-s3 -laws-cpp-sdk-core 
+/usr/bin/c++  -g   CMakeFiles/test_aws.dir/main.cpp.o  -o test_aws  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -laws-cpp-sdk-sqs -laws-cpp-sdk-transfer -laws-cpp-sdk-dynamodb -laws-cpp-sdk-s3-encryption -laws-cpp-sdk-kms -laws-cpp-sdk-apigateway -laws-cpp-sdk-s3 -laws-cpp-sdk-core 
