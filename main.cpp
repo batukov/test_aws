@@ -8,10 +8,7 @@
 #include <fstream>
 #include <unistd.h>
 #include <aws/transfer/TransferManager.h>
-#include <aws/transfer/TransferHandle.h>
-#include <aws/transfer/Transfer_EXPORTS.h>
-#include <iostream>
-#include <fstream>
+
 #include <jsoncpp/json/json.h>
 #include <chrono>
 typedef std::chrono::high_resolution_clock Clock;
@@ -188,6 +185,9 @@ int main(int argc, char** argv)
                   "Not enough arguments\n" << std::endl;
         exit(1);
     }
+    Aws::SDKOptions options;
+    Aws::InitAPI(options);
+    {
     Aws::Vector <Aws::String> val = parse_request(argv[1]);
     int port_value = get_port_value(argc, argv);
     if(port_value != -1)
@@ -214,17 +214,13 @@ int main(int argc, char** argv)
             exit(1);
         }
     }
-    Aws::SDKOptions options;
 
     std::chrono::time_point<std::chrono::high_resolution_clock> time_f_point;
     std::chrono::time_point<std::chrono::high_resolution_clock> time_s_point;
-    Aws::InitAPI(options);
-    {
-        time_f_point = Clock::now();
-        download_file(bucket_name, object_name, file_name);
-    }
 
-    Aws::ShutdownAPI(options);
+    time_f_point = Clock::now();
+    download_file(bucket_name, object_name, file_name);
+
 
     std::string sox_command;
 
@@ -236,9 +232,11 @@ int main(int argc, char** argv)
         sox_command.append(result_name.c_str());
         const char* new_temp_mode_one = sox_command.c_str();
         system(new_temp_mode_one);
+
         time_s_point = Clock::now();
         json_output_mode_one(get_file_info(result_name.c_str()),
                              std::chrono::duration_cast<std::chrono::milliseconds>(time_s_point - time_f_point).count());
+
     }
     else{
         std::cout<<file_name<<std::endl;
@@ -246,8 +244,10 @@ int main(int argc, char** argv)
         json_output_mode_zero(get_file_info(file_name.c_str()),
                               std::chrono::duration_cast<std::chrono::milliseconds>(time_s_point - time_f_point).count());
     }
-    exit(0);
-    //return 0;
+    }
+
+    Aws::ShutdownAPI(options);
+    return 0;
 
 }
 ///mp3-to-wav?mp3key=as/Stuck_Mojo_-_Who_s_the_Devil.mp3&wavkey=test2.wav

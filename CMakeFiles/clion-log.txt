@@ -1,18 +1,4 @@
 /home/diehigh/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -DCMAKE_C_COMPILER=/usr/local/bin/gcc -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/diehigh/Desktop/test_aws
--- The C compiler identification is GNU 7.2.0
--- The CXX compiler identification is GNU 7.2.0
--- Check for working C compiler: /usr/local/bin/gcc
--- Check for working C compiler: /usr/local/bin/gcc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/local/bin/g++
--- Check for working CXX compiler: /usr/local/bin/g++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 -- TARGET_ARCH not specified; inferring host OS to be platform compilation target
 -- Building AWS libraries as static objects
 -- Generating linux build config
@@ -23,16 +9,6 @@
 -- AWSSDK_BIN_DIR: /usr/local/bin/
 -- s3-encryption;transfer;apigateway depends on libs: ;core
 -- All linked libs: aws-cpp-sdk-sqs;aws-cpp-sdk-transfer;aws-cpp-sdk-dynamodb;aws-cpp-sdk-s3-encryption;aws-cpp-sdk-kms;aws-cpp-sdk-apigateway;aws-cpp-sdk-s3;aws-cpp-sdk-core
--- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
--- Checking for modules 'aws-cpp-sdk-sqs;aws-cpp-sdk-transfer;aws-cpp-sdk-dynamodb;aws-cpp-sdk-s3-encryption;aws-cpp-sdk-kms;aws-cpp-sdk-apigateway;aws-cpp-sdk-s3;aws-cpp-sdk-core'
---   Found aws-cpp-sdk-sqs, version 1.4.38
---   Found aws-cpp-sdk-transfer, version 1.4.38
---   Found aws-cpp-sdk-dynamodb, version 1.4.38
---   Found aws-cpp-sdk-s3-encryption, version 1.4.38
---   Found aws-cpp-sdk-kms, version 1.4.38
---   Found aws-cpp-sdk-apigateway, version 1.4.38
---   Found aws-cpp-sdk-s3, version 1.4.38
---   Found aws-cpp-sdk-core, version 1.4.38
 export PATH=$PATH://home/diehigh/Desktop/test_aws/test_aws » ~/.bashrc
 -- Configuring done
 -- Generating done

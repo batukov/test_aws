@@ -27,14 +27,6 @@ unistd.h
 -
 aws/transfer/TransferManager.h
 -
-aws/transfer/TransferHandle.h
--
-aws/transfer/Transfer_EXPORTS.h
--
-iostream
--
-fstream
--
 jsoncpp/json/json.h
 -
 chrono
